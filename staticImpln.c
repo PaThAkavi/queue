@@ -34,7 +34,7 @@ void display(){
     }
     else{
         while(rear != CAPACITY-1){
-            printf("%d, ", queue[rear]);
+            printf("%d ", queue[rear]);
             rear += 1;
         }
         printf("\n");
