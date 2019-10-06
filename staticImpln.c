@@ -1,5 +1,7 @@
 #include<stdio.h>
-# define CAPACITY 5 
+#include<stdlib.h>
+# define CAPACITY 5
+ 
 void insert();
 void display();
 void delete();
@@ -9,14 +11,24 @@ int rear = 0;
 int front = 0;
 
 int main(){
-    insert();
-    insert();
-    insert();
-    display();
-    delete();
-    display();
-    delete();
-    display();
+    while(1){
+        int opt;
+        printf("1. Insert\n");
+        printf("2. Delete\n");
+        printf("3. display\n");
+        printf("4. Exit\n");
+
+        printf("Select your choice : \n");
+        scanf("%d", &opt);
+
+        switch(opt){
+            case 1: insert(); break;
+            case 2: delete(); break;
+            case 3: display(); break;
+            case 4: exit(1);
+            default: printf("Invalid input\n");
+        }
+    }
     return 0;
 }
 
